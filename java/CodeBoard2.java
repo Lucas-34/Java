@@ -37,7 +37,7 @@ Questions:
 	Hint: the resulting maze should now have shortcuts to go from the top left cell to the center, 
 	and the maze still be readable (not a mess ;)
 */
-
+/*
 public class Main
 {
     public static void display(char labyrinth [][])
@@ -116,3 +116,4 @@ onesInDirection(nb)
         }
     }
 }
+*/

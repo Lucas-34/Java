@@ -28,7 +28,7 @@ Questions:
 	
 
 */
-
+/*
 public class Main
 {
     public static void display(char labyrinth [][])
@@ -66,3 +66,5 @@ public class Main
 		System.out.print("that's it!\n");
     }
 }
+*/
+ 
