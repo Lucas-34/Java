@@ -15,16 +15,18 @@ public class Minautor
 
    public String currentPosition()
    {
-     return "La position actuelle du minautore est (" + x + "," + y + ")";
+     return "La position actuelle du minautore est (" + position_x + "," + position_y + ")";
    }
 
    public int getPositionX()
    {
      return position_x;
    }
+   public void setPositionX(int x) { position_x += x; }
 
    public int getPositionY()
    {
      return position_y;
    }
+   public void setPositionY(int y) { position_y += y; }
 }

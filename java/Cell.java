@@ -19,7 +19,8 @@ public class Cell
   private Etat_porte etat_porte_sud;
   private Etat_porte etat_porte_est;
   private Etat_porte etat_porte_ouest;
-  private boolean visited;
+  private boolean minautor_visited;
+  private boolean Theseus_visited;
 
   public void setEtatPorte(Porte porte, Etat_porte etat)
   {
@@ -46,10 +47,11 @@ public class Cell
     etat_porte_sud = Etat_porte.fermee;
     etat_porte_est = Etat_porte.fermee;
     etat_porte_ouest = Etat_porte.fermee;
-    visited = false;
+    minautor_visited = false;
+    Theseus_visited = false;
   }
 
-  public Etat_porte etat(Porte porte)
+  public Etat_porte getEtatPorte(Porte porte)
   {
     switch(porte)
     {
@@ -66,13 +68,23 @@ public class Cell
     }
   }
 
-  public void setVisited()
+  public void setMinautorVisited()
   {
-    visited = true;
+    minautor_visited = true;
   }
 
-  public boolean getVisited()
+  public boolean getMinautorVisited()
   {
-    return visited;
+    return minautor_visited;
+  }
+
+  public void setTheseusVisited()
+  {
+    Theseus_visited = true;
+  }
+
+  public boolean getTheseusVisited()
+  {
+    return Theseus_visited;
   }
 }
