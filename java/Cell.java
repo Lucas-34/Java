@@ -19,6 +19,7 @@ public class Cell
   private Etat_porte etat_porte_sud;
   private Etat_porte etat_porte_est;
   private Etat_porte etat_porte_ouest;
+  private boolean visited;
 
   public void setEtatPorte(Porte porte, Etat_porte etat)
   {
@@ -45,6 +46,7 @@ public class Cell
     etat_porte_sud = Etat_porte.fermee;
     etat_porte_est = Etat_porte.fermee;
     etat_porte_ouest = Etat_porte.fermee;
+    visited = false;
   }
 
   public Etat_porte etat(Porte porte)
@@ -62,5 +64,15 @@ public class Cell
       default:
         return Etat_porte.fermee;
     }
+  }
+
+  public void setVisited()
+  {
+    visited = true;
+  }
+
+  public boolean getVisited()
+  {
+    return visited;
   }
 }
