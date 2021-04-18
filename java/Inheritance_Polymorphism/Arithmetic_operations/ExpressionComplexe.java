@@ -1,42 +1,46 @@
-public class ExpressionComplexe
+package Inheritance_Polymorphism.Arithmetic_operations;
+
+public class ExpressionComplexe extends Expression
 {
-  private Constante constante1, constante2;
+  private Expression e1, e2;
   private char operateur;
 
-  public ExpressionComplexe(Constante operande1, char operateur, Constante operande2)
+  public ExpressionComplexe(Expression operande1, char operateur, Expression operande2) throws Exception
   {
     if(operateur != '+' && operateur != '-' && operateur != '*' && operateur != '/') { throw new Exception("Erreur: l'opérateur arithmétique ne peut qu'être +, -, * ou /."); }
 
-    constante1 = operande1;
+    e1 = operande1;
     this.operateur = operateur;
-    constante2 = operande2;
+    e2 = operande2;
   }
 
-  public Constante getConstante1() { return constante1; }
-  public void setConstante1(Constante constante1) { this.constante1 = constante1; }
+  /*
+  public Expression getExpression1() { return e1; }
+  public void setExpression1(Expression e1) { this.e1 = e1; }
 
-  public Constante getConstante2() { return constante2; }
-  public void setConstante2(Constante constante2) { this.constante2 = constante2; }
+  public Expression getExpression2() { return e2; }
+  public void setExpression2(Expression e2) { this.e2 = e2; }
+   */
 
   public char getOperateur() { return operateur; }
   public void setOperateur(char operateur) { this.operateur = operateur; }
 
-  public double Eval()
+  @Override
+  public double Eval() throws Exception
   {
     switch(operateur)
     {
       case '+':
-        return constante1.getConstante() + constante2.getConstante();
+        return e1.Eval() + e2.Eval();
       case '-':
-        return constante1.getConstante() - constante2.getConstante();
+        return e1.Eval() - e2.Eval();
       case '*':
-        return constante1.getConstante() * constante2.getConstante();
+        return e1.Eval() * e2.Eval();
       case '/':
-        if(constante2.getConstante() == 0) { throw new Exception("Erreur: le dénominateur doit être non-nul."); }
-        return constante1.getConstante() / constante2.getConstante();
+        if(e2.Eval() == 0) { throw new Exception("Erreur: le dénominateur doit être non-nul."); }
+        return e1.Eval() / e2.Eval();
       default:
-        System.out.println("ERREUR");
-        break;
+        throw new Exception("ERREUR");
     }
   }
 }

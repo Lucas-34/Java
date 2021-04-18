@@ -1,5 +1,5 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
+package Inheritance_Polymorphism.Animals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAnimal
 {
@@ -8,9 +8,12 @@ public class TestAnimal
     Pet pet = new Pet("Daffy");
     
     String actualResult = pet.getName();
-    
-    assertTrue("Test avec la super classe Pet.", actualResult.equals("Daffy"));
+
+    assertEquals("Test avec la super classe Pet.", actualResult.equals("Daffy"));
   }
+
+
+
 
   public final void testInheritance()
   {
@@ -18,7 +21,7 @@ public class TestAnimal
     
     String actualResult = pet.getName();
 
-    assertTrue("Test avec la sous-classe Dog.", actualResult.equals("Zeus"));
+    assertEquals("Test avec la sous-classe Dog.", actualResult.equals("Zeus"));
   }
 
   public final void testPolymorphisme()
@@ -31,6 +34,6 @@ public class TestAnimal
     
     String actualResult = pet.getName();
 
-    assertTrue("Test du polymorphisme.", actualResult.equals("Milou"));
+    assertEquals("Test du polymorphisme.", actualResult.equals("Milou"));
   }
 }

@@ -1,10 +1,12 @@
+package Inheritance_Polymorphism.Pokemon;
+
 public class Pokemon
 {
   private String name;
-  private float weight;
-  private float speed;
+  private double weight;
+  private double speed;
 
-  public Pokemon(String name, float weight)
+  public Pokemon(String name, double weight)
   {
     this.name = name;
     this.weight = weight;
@@ -13,9 +15,9 @@ public class Pokemon
   public String getName() { return name; }
   public void setName(String name) { this.name = name; }
 
-  public float getWeight() { return weight; }
-  public void setWeight(float weight) { this.weight = weight; }
+  public double getWeight() { return weight; }
+  public void setWeight(double weight) { this.weight = weight; }
 
-  public float getSpeed() { return speed; }
-  public void setSpeed(float speed) { this.speed = speed; }
+  public double getSpeed() { return speed; }
+  public void setSpeed(double speed) { this.speed = speed; }
 }

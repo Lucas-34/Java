@@ -1,3 +1,5 @@
+package Inheritance_Polymorphism.Animals;
+
 public class Cat extends Pet
 {
   private int lives = 7;

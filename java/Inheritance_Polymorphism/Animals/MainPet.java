@@ -1,4 +1,6 @@
-public class Main
+package Inheritance_Polymorphism.Animals;
+
+public class MainPet
 {
   public static void main(String[] args)
   {

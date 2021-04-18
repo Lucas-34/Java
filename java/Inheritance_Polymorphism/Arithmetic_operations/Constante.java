@@ -1,8 +1,11 @@
-public class Constante
+package Inheritance_Polymorphism.Arithmetic_operations;
+
+public class Constante extends Expression
 {
   private final double constante;
 
   public Constante(double constante) { this.constante = constante; }
 
-  public double getConstante() { return constante; }
+  @Override
+  public double Eval() { return constante; }
 }
