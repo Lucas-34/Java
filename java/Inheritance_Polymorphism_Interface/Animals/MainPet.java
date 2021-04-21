@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism.Animals;
+package Inheritance_Polymorphism_Interface.Animals;
 
 public class MainPet
 {

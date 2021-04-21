@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism.Arithmetic_operations;
+package Inheritance_Polymorphism_Interface.Arithmetic_operations;
 
 public abstract class Expression
 {

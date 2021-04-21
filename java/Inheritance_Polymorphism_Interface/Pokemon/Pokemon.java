@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism.Pokemon;
+package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class Pokemon
 {
