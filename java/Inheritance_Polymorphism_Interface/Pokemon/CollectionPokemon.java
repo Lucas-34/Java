@@ -17,11 +17,11 @@ public class CollectionPokemon
         if(collection_pokemon.size() == 0) { throw new Exception("Erreur: Il n'y a aucun pokémon dans la collection."); }
         else
         {
-            int i = 0;
+            int i = 1;
 
             while(i < collection_pokemon.size())
             {
-                collection_pokemon.set(i, null);
+                collection_pokemon.remove(i);
 
                 i ++;
             }
@@ -39,13 +39,13 @@ public class CollectionPokemon
         else
         {
             int numerateur = 0;
-            int i = 0;
+            int i = 1;
 
             while(i < collection_pokemon.size())
             {
                 numerateur += collection_pokemon.get(i).getSpeed();
 
-                i ++;
+                i++;
             }
 
             return numerateur / collection_pokemon.size();
@@ -59,11 +59,11 @@ public class CollectionPokemon
         {
             int numerateur = 0;
             int nb_pokemons_sportifs = 0;
-            int i = 0;
+            int i = 1;
 
             while(i < collection_pokemon.size())
             {
-                if(collection_pokemon.get(i).getClass().getSimpleName() == "SportsPokemon")
+                if(collection_pokemon.get(i).getClass() == SportsPokemon.class)
                 {
                     numerateur += collection_pokemon.get(i).getSpeed();
 
@@ -84,7 +84,7 @@ public class CollectionPokemon
     public String toString()
     {
         String result = "";
-        int i = 0;
+        int i = 1;
 
         while(i < collection_pokemon.size())
         {
