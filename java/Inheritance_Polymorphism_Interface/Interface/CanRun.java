@@ -1,0 +1,1 @@
+public interface CanRun { public double run(double time); }

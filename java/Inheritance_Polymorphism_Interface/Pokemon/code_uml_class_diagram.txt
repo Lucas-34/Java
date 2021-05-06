@@ -1,0 +1,105 @@
+@startuml
+
+class Pokemon {
+  {field} - String name;
+  {field} - double weight;
+  {field} - double speed;
+
+  {method} + Pokemon(String name, double weight)
+
+  {method} + String getName()
+  {method} + void setName(String name)
+
+  {method} + double getWeight()
+  {method} + void setWeight(double weight)
+
+  {method} + double getSpeed()
+  {method} + void setSpeed(double speed)
+
+  {method} + String toString()
+}
+
+class EarthPokemon {
+  {field} - int nb_legs;
+  {field} - double size;
+
+  {method} + EarthPokemon(String name, double weight, int nb_legs, double size)
+
+  {method} + int getNbLegs()
+  {method} + void setNbLegs(int nb_legs)
+
+  {method} + double getSize()
+  {method} + void setSize(double size)
+
+  {method} + @Override String toString()
+}
+
+class SportsPokemon {
+  {field} - int heart_rate;
+
+  {method} + SportsPokemon(String name, double weight, int nb_legs, double size, int heart_rate)
+
+  {method} + int getHeartRate()
+  {method} + void setHeartRate(int heart_rate)
+
+  {method} + @Override String toString()
+}
+
+class StayAtHomePokemon {
+  {field} - int nb_hpd_TV;
+
+  {method} + StayAtHomePokemon(String name, double weight, int nb_legs, double size, int nb_hpd_TV)
+
+  {method} + int getNbHpdTV()
+  {method} + void setNbHpdTV(int nb_hpd_TV)
+
+  {method} + @Override String toString()
+}
+
+class SeaPokemon {          
+  {field} - int nb_fins;
+
+  {method} + SeaPokemon(String name, double weight, int nb_fins)
+
+  {method} + int getNbFins()
+  {method} + void setNbFins(int nb_fins)
+
+  {method} + @Override String toString()
+}
+
+class MarinePokemon {
+  {method} + MarinePokemon(String name, double weight, int nb_fins)
+
+  {method} + @Override String toString()
+}
+
+class CruisingPokemon {
+  {method} + CruisingPokemon(String name, double weight, int nb_fins)
+
+  {method} + @Override String toString()
+}
+
+class CollectionPokemon {
+  {field} - ArrayList<Pokemon> collection_pokemon;
+
+  {method} + CollectionPokemon()
+  {method} + void emptyCollection()
+  {method} + void addPokemon(Pokemon pokemon)
+  {method} + double averageSpeed()
+  {method} + double averageSpeedSportsPokemon()
+  {method} + ArrayList<Pokemon> getArrayListPokemon()
+  {method} + void setArrayListPokemon(ArrayList<Pokemon> collection_pokemon)
+  {method} + String toString()
+}
+
+EarthPokemon --|> Pokemon
+SportsPokemon --|> EarthPokemon
+StayAtHomePokemon --|> EarthPokemon
+
+SeaPokemon --|> Pokemon
+MarinePokemon --|> SeaPokemon
+CruisingPokemon --|> SeaPokemon
+
+CollectionPokemon "1,*" o-- "*" Pokemon: Contient
+
+@enduml

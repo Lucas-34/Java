@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class SeaPokemon extends Pokemon
 {
@@ -14,5 +14,5 @@ public class SeaPokemon extends Pokemon
   public void setNbFins(int nb_fins) { this.nb_fins = nb_fins; }
 
   @Override
-  public String toString() { return "Un pokémon aquatique a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de palmes : " + this.getNbFins() + "\n"; }
+  public String toString() { return "Un pokémon aquatique a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de palmes : " + nb_fins + "\n"; }
 }

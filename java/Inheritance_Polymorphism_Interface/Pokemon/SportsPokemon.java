@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class SportsPokemon extends EarthPokemon
 {
@@ -14,5 +14,5 @@ public class SportsPokemon extends EarthPokemon
   public void setHeartRate(int heart_rate) { this.heart_rate = heart_rate; }
 
   @Override
-  public String toString() { return "Un pokémon sportif a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + this.getNbLegs() + "\nTaille : " + this.getSize() + " m\nVitesse : " + this.getSpeed() + " km/h\nFréquence cardiaque : " + this.getHeartRate() + " bpm \n"; }
+  public String toString() { return "Un pokémon sportif a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + this.getNbLegs() + "\nTaille : " + this.getSize() + " m\nVitesse : " + this.getSpeed() + " km/h\nFréquence cardiaque : " + heart_rate + " bpm \n"; }
 }

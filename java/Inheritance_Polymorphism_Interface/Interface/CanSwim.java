@@ -1,0 +1,1 @@
+public interface CanSwim { public double swim(double time); }

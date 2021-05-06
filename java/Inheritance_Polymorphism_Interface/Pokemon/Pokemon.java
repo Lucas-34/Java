@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class Pokemon
 {
@@ -21,5 +21,5 @@ public class Pokemon
   public double getSpeed() { return speed; }
   public void setSpeed(double speed) { this.speed = speed; }
 
-  public String toString() { return "Un pokémon terrestre a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg \n"; }
+  public String toString() { return "Un pokémon terrestre a été créé. Ses caractéristiques sont :\nNom : " + name + "\nPoids : " + weight + " kg \n"; }
 }

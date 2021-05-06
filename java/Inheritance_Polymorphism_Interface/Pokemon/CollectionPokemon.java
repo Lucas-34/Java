@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 import java.util.*;
 import java.lang.*;
 

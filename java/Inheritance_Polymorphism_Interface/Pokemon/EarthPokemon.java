@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class EarthPokemon extends Pokemon
 {
@@ -20,5 +20,5 @@ public class EarthPokemon extends Pokemon
   public void setSize(double size) { this.size = size; }
 
   @Override
-  public String toString() { return "Un pokémon terrestre a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + this.getNbLegs() + "\nTaille : " + this.getSize() + "\nVitesse : " + this.getSpeed() + " km/h \n"; }
+  public String toString() { return "Un pokémon terrestre a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + nb_legs + "\nTaille : " + size + " m\nVitesse : " + this.getSpeed() + " km/h \n"; }
 }

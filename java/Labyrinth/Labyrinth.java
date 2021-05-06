@@ -31,7 +31,7 @@ public class Labyrinth
         getCell(0, 0).setTheseusVisited();
     }
 
-    // borneInf et borneSup inclues
+    // borneInf et borneSup incluses
     int genererInt(int borneInf, int borneSup)
     {
         Random random = new Random();

@@ -1,4 +1,4 @@
-package Inheritance_Polymorphism_Interface.Pokemon;
+// package Inheritance_Polymorphism_Interface.Pokemon;
 
 public class StayAtHomePokemon extends EarthPokemon
 {
@@ -14,5 +14,5 @@ public class StayAtHomePokemon extends EarthPokemon
   public void setNbHpdTV(int nb_hpd_TV) { this.nb_hpd_TV = nb_hpd_TV; }
 
   @Override
-  public String toString() { return "Un pokémon casanier a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + this.getNbLegs() + "\nTaille : " + this.getSize() + " m\nVitesse : " + this.getSpeed() + " km/h\nNombre d'heures passées devant la télé par jour : " + this.getNbHpdTV() + "\n"; }
+  public String toString() { return "Un pokémon casanier a été créé. Ses caractéristiques sont :\nNom : " + this.getName() + "\nPoids : " + this.getWeight() + " kg\nNombre de jambes : " + this.getNbLegs() + "\nTaille : " + this.getSize() + " m\nVitesse : " + this.getSpeed() + " km/h\nNombre d'heures passées devant la télé par jour : " + nb_hpd_TV + "\n"; }
 }
