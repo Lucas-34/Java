@@ -1,4 +1,5 @@
 package graph;
+import graph.*;
 
 public class Vertex
 {
@@ -19,7 +20,6 @@ public class Vertex
   {
     this.id = availableId;
     availableId ++;
-    info = null;
     color = 'b';
   }
 

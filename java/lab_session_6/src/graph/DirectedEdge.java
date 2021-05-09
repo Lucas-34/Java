@@ -1,5 +1,7 @@
 package graph;
 
+import graph.*;
+
 public class DirectedEdge extends Edge
 {
   private int source;
@@ -7,6 +9,13 @@ public class DirectedEdge extends Edge
   public DirectedEdge(double value, Vertex v0, Vertex v1, int source) throws Exception
   {
     super(value, v0, v1);
+    if(source != 0 && source != 1) { throw new Exception("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
+    this.source = source;
+  }
+
+  public DirectedEdge(Vertex v0, Vertex v1, int source) throws Exception
+  {
+    super(v0, v1);
     if(source != 0 && source != 1) { throw new Exception("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
     this.source = source;
   }

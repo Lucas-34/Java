@@ -1,4 +1,5 @@
 package graph;
+import graph.*;
 
 public abstract class Edge
 {
@@ -16,6 +17,15 @@ public abstract class Edge
     ends[0] = v0;
     ends[1] = v1;
     this.value = value;
+  }
+
+  public Edge(Vertex v0, Vertex v1)
+  {
+    id = availableId;
+    availableId ++;
+    color = 'b';
+    ends[0] = v0;
+    ends[1] = v1;
   }
   
   public int getId() { return id; }
