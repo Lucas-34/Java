@@ -28,5 +28,14 @@ public class TestGraphImpl
     incidence_array_graph.addEdge(v1, v2);
 
     incidence_array_graph.initIncidenceArray();
+
+    System.out.println("Est-ce que tous les sommets du graphe sont connectés ? " + incidence_array_graph.areConnected()); // Doit retourner false
+
+    System.out.println("Est-ce que v1 est connecté à v2 ? " + incidence_array_graph.areConnected(v1, v2)); // Doit retourner true
+
+    System.out.println("Est-ce que v1 est connecté à v3 ? " + incidence_array_graph.areConnected(v1, v3)); // Doit retourner false
+
+    System.out.println("Liste de sommets : " + incidence_array_graph.getEdges().toString()); 
+    // Montre la liste des vertex
   }
 }
