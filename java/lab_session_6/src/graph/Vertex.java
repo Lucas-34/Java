@@ -1,4 +1,5 @@
 package graph;
+
 import graph.*;
 
 public class Vertex

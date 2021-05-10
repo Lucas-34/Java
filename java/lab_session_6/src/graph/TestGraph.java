@@ -1,9 +1,10 @@
 package graph;
+
 import graph.*;
 
 public class TestGraph
 {
-  public static void main(String[] args) throws Exception
+  public static void main(String[] args) throws IllegalArgumentException
   {
     Vertex v0 = new Vertex();
     System.out.println(v0);

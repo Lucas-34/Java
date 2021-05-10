@@ -1,4 +1,5 @@
 package graph;
+
 import graph.*;
 
 public class UndirectedEdge extends Edge
@@ -14,5 +15,5 @@ public class UndirectedEdge extends Edge
   }
 
   @Override
-  public String toString() { return "Une transition non-orientée a été créée. Ses caractéristiques sont :\nId : " + this.getId() + "\nColor : " + this.getColor() + "\nValue : " + this.getValue() + "\n"; }
+  public String toString() { return "Une transition non-orientée a été créée. Ses caractéristiques sont :\nId : " + this.getId() + "\nColor : " + this.getColor() + "\nValue : " + this.getValue() + "\nIl relie le vertex " + this.getEnds()[0].getId() + " et le vertex " + this.getEnds()[1].getId() + "\n"; }
 }
