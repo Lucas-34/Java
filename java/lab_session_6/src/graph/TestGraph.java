@@ -11,7 +11,18 @@ public class TestGraph
     Vertex v1 = new Vertex();
     System.out.println(v1);
 
-    Edge edge = new DirectedEdge(v0, v1, 0);
-    System.out.println(edge.toString());
+    try
+    {
+      Edge edge1 = new DirectedEdge(v0, v1, 0);
+      System.out.println(edge1.toString());
+    }
+    catch(IllegalArgumentException exception) { System.out.println(exception.toString()); }
+    
+    try
+    {
+      Edge edge2 = new DirectedEdge(v1, v0, 5);
+      System.out.println(edge2.toString());
+    }
+    catch(IllegalArgumentException exception) { System.out.println(exception.toString()); } 
   }
 }

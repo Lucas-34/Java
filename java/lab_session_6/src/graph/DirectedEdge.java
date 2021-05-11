@@ -9,14 +9,14 @@ public class DirectedEdge extends Edge
   public DirectedEdge(double value, Vertex v0, Vertex v1, int source) throws IllegalArgumentException
   {
     super(value, v0, v1);
-    if(source != 0 && source != 1) { throw new IllegalArgumentException ("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
+    if(source != 0 && source != 1) { throw new IllegalArgumentException("Erreur: l'indice de la source ne peut qu'être 0 ou 1. \n"); }
     this.source = source;
   }
 
   public DirectedEdge(Vertex v0, Vertex v1, int source) throws IllegalArgumentException
   {
     super(v0, v1);
-    if(source != 0 && source != 1) { throw new IllegalArgumentException ("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
+    if(source != 0 && source != 1) { throw new IllegalArgumentException("Erreur: l'indice de la source ne peut qu'être 0 ou 1. \n"); }
     this.source = source;
   }
 
@@ -31,11 +31,11 @@ public class DirectedEdge extends Edge
     else { return getEnds()[1]; }
   }
 
-  // public int getSource() { return source; }
+  public int getSourceIndex() { return source; }
 
   public void setSource(int source) throws IllegalArgumentException 
   {
-    if(source != 0 && source != 1) { throw new IllegalArgumentException ("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
+    if(source != 0 && source != 1) { throw new IllegalArgumentException("Erreur: l'indice de la source ne peut qu'être 0 ou 1."); }
 
     this.source = source;
   }

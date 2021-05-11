@@ -103,14 +103,15 @@ public class IncidenceArrayGraph implements Graph
   public int nbOfEdges() { return tab_edges.length; }
 
   @Override
-  public void addVertex(Vertex vertex)
+  public void addVertex(Vertex vertex) throws GraphOverflowException
   {
+    if(vertex.getId() > tab_vertices.length - 1) { throw new GraphOverflowException("Erreur : Vous avez dépassé la taille imposée pour le tableau de vertices. \n"); }
     tab_vertices[vertex.getId()] = vertex;
   }
 
   
   @Override
-  public void addEdge(Vertex v0, Vertex v1, int source) throws IllegalArgumentException // On considère v0 comme origine et v1 comme fin.
+  public void addEdge(Vertex v0, Vertex v1, int source) throws IllegalArgumentException, GraphOverflowException
   {   
     int j = 0;
     Edge new_edge;
@@ -118,6 +119,7 @@ public class IncidenceArrayGraph implements Graph
     if(edgeKind == EdgeKind.directed) { new_edge = new DirectedEdge(v0, v1, source); }
     else { new_edge = new UndirectedEdge(v0, v1); }
 
+    if(new_edge.getId() > tab_edges.length - 1) { throw new GraphOverflowException("Erreur : Vous avez dépassé la taille imposée  pour le tableau d'edges. \n"); }
     tab_edges[new_edge.getId()] = new_edge; 
     
     while(incidenceArray[v0.getId()][j] != null) { j ++; }
@@ -244,10 +246,6 @@ public class IncidenceArrayGraph implements Graph
     return "Voici votre tableau d'incidence : \n" + result + "\n";
   }
   */
-
-
-
-
 
   public String toString()
   { 
